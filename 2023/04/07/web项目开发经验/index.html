@@ -16,21 +16,21 @@
   <meta name="author" content="AddSomeSalt">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. 教程htt">
+    <meta name="description" content="前端js对象赋值、复制问题vue对象中 两个data对象都&#x3D;res.data.data.xxx时，绑定的是同一个对象。类似于指针赋值的概念。 vue项目，想复制一个对象且消除关联性：使用Object.assign()只会消除对象内部第一层属性的关联性，即并不是深复制。如果对象只有一层属性，那么可以考虑用let obj2 &#x3D; Object.assign({}, obj1)。如果想">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo博客管理">
-<meta property="og:url" content="http://example.com/2023/04/02/hello-world/index.html">
+<meta property="og:title" content="web项目开发经验">
+<meta property="og:url" content="http://example.com/2023/04/07/web%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C/index.html">
 <meta property="og:site_name" content="AddSalt&#39;s Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. 教程htt">
+<meta property="og:description" content="前端js对象赋值、复制问题vue对象中 两个data对象都&#x3D;res.data.data.xxx时，绑定的是同一个对象。类似于指针赋值的概念。 vue项目，想复制一个对象且消除关联性：使用Object.assign()只会消除对象内部第一层属性的关联性，即并不是深复制。如果对象只有一层属性，那么可以考虑用let obj2 &#x3D; Object.assign({}, obj1)。如果想">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-04-02T14:12:12.427Z">
-<meta property="article:modified_time" content="2023-04-04T02:37:05.077Z">
+<meta property="article:published_time" content="2023-04-07T03:28:42.000Z">
+<meta property="article:modified_time" content="2023-04-14T03:41:28.719Z">
 <meta property="article:author" content="AddSomeSalt">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>hexo博客管理 - AddSalt&#39;s Blog</title>
+  <title>web项目开发经验 - AddSalt&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="hexo博客管理"></span>
+            <span id="subtitle" data-typed-text="web项目开发经验"></span>
           
         </div>
 
@@ -207,8 +207,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-04-02 22:12" pubdate>
-          2023年4月2日 晚上
+        <time datetime="2023-04-07 11:28" pubdate>
+          2023年4月7日 上午
         </time>
       </span>
     
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          483 字
+          617 字
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          5 分钟
+          6 分钟
         
       </span>
     
@@ -268,26 +268,18 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">hexo博客管理</h1>
+            <h1 style="display: none">web项目开发经验</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/huanhao/p/hexobase.html#%E6%90%AD%E5%BB%BA%E4%B9%8B%E5%89%8D%E7%9A%84%E5%87%86%E5%A4%87">https://www.cnblogs.com/huanhao/p/hexobase.html#%E6%90%AD%E5%BB%BA%E4%B9%8B%E5%89%8D%E7%9A%84%E5%87%86%E5%A4%87</a></p>
-<h2 id="所有主题"><a href="#所有主题" class="headerlink" title="所有主题"></a>所有主题</h2><p><a target="_blank" rel="noopener" href="https://hexo.io/themes/">https://hexo.io/themes/</a></p>
-<h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><h3 id="创建文章"><a href="#创建文章" class="headerlink" title="创建文章"></a>创建文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="启动服务器"><a href="#启动服务器" class="headerlink" title="启动服务器"></a>启动服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server/hexo s<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="静态文件生成"><a href="#静态文件生成" class="headerlink" title="静态文件生成"></a>静态文件生成</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="部署到远程站点相当于push"><a href="#部署到远程站点相当于push" class="headerlink" title="部署到远程站点相当于push"></a>部署到远程站点相当于push</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy/hexo g -d<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+                <h1 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h1><p><code>js对象赋值、复制问题</code><br>vue对象中 两个data对象都&#x3D;res.data.data.xxx时，<br>绑定的是同一个对象。类似于指针赋值的概念。</p>
+<p>vue项目，想复制一个对象且消除关联性：<br>使用Object.assign()只会消除对象内部第一层属性的关联性，即并不是深复制。如果对象只有一层属性，那么可以考虑用let obj2 &#x3D; Object.assign({}, obj1)。<br>如果想深复制，可以利用字符串类型和对象类型之间无关联性进行复制，即A转字符串再转为对象赋值给B，那么A和B无关联性了（简单暴力）。let obj2 &#x3D; JSON.parse(JSON.stringify(obj1));</p>
+<h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><p><code>命名规范:</code><br><strong>表名、字段名：</strong><br>小写字母+下划线。</p>
+<p><code>字段类型:</code><br><strong>mysql没有bool类型</strong>，可以用tinyint或者更细一点用tinyint(1)。<br>其中0代表false，1(或非0)代表true。<br>可以映射为java的boolean、int。<br>tinyint占一字节，可以节省数据库存储空间。<br>类型后的(num)是代表显示宽度。</p>
+<h1 id="ajax报错"><a href="#ajax报错" class="headerlink" title="ajax报错"></a>ajax报错</h1><p><code>500等5开头的</code><br>后端错误。</p>
+<p><code>400等4开头的</code><br>400:  请求匹配错误，可能是url，也可能是参数没匹配，比如json转后端List可能会出问题。</p>
+<p>405:  DELETE的request方法不支持：delete是restful风格，这种请求方法的参数要写在路径里，不能<strong>delete（url, {data:xxx}）</strong>。</p>
 
                 
               </div>
@@ -305,8 +297,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>hexo博客管理</div>
-      <div>http://example.com/2023/04/02/hello-world/</div>
+      <div>web项目开发经验</div>
+      <div>http://example.com/2023/04/07/web项目开发经验/</div>
     </div>
     <div class="license-meta">
       
@@ -318,7 +310,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年4月2日</div>
+          <div>2023年4月7日</div>
         </div>
       
       
@@ -350,15 +342,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/04/03/%E8%80%83%E7%A0%94%E7%BB%8F%E9%AA%8C%E7%A2%8E%E7%A2%8E%E5%BF%B5/" title="考研经验碎碎念">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">考研经验碎碎念</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2023/04/06/git%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E5%90%88%E9%9B%86/" title="git指令使用合集">
+                        <span class="hidden-mobile">git指令使用合集</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
