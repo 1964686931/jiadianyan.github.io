@@ -16,21 +16,22 @@
   <meta name="author" content="AddSomeSalt">
   <meta name="keywords" content="">
   
-    <meta name="description" content="获取方式注意，请阅读eula。请勿发布获得的源码。mc反编译github项目：mcp-Reborn 获取时注意事项如果报错请按照具体错误去修改配置等。可百度。常见错误：  jdk版本不对，见mcp-Reborn。高版本1.18+要用jdk17。 gradle没配置好。 idea版本不对（踩坑记录。导入gradle时，报Unable to find the .. method ‘java.lang.">
+    <meta name="description" content="互联网开发课程部分整理 vue项目部署到云服务器目标vue项目部署到云服务器上的nginx 环境node 16、vuecli、 阿里云服务器（CentOS）、winSCP、XShell 步骤本地项目执行npm run build，生成dist文件夹。 用winSCP等上传到云服务器。 云服务器安装nginx 1wget ?  …… 修改nginx配置文件，具体有修改项目文件夹目录（上传到云服务器的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mc源码">
-<meta property="og:url" content="http://example.com/2023/05/07/mc%E6%BA%90%E7%A0%81/index.html">
+<meta property="og:title" content="项目部署">
+<meta property="og:url" content="http://example.com/2023/09/27/%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/index.html">
 <meta property="og:site_name" content="AddSalt&#39;s Blog">
-<meta property="og:description" content="获取方式注意，请阅读eula。请勿发布获得的源码。mc反编译github项目：mcp-Reborn 获取时注意事项如果报错请按照具体错误去修改配置等。可百度。常见错误：  jdk版本不对，见mcp-Reborn。高版本1.18+要用jdk17。 gradle没配置好。 idea版本不对（踩坑记录。导入gradle时，报Unable to find the .. method ‘java.lang.">
+<meta property="og:description" content="互联网开发课程部分整理 vue项目部署到云服务器目标vue项目部署到云服务器上的nginx 环境node 16、vuecli、 阿里云服务器（CentOS）、winSCP、XShell 步骤本地项目执行npm run build，生成dist文件夹。 用winSCP等上传到云服务器。 云服务器安装nginx 1wget ?  …… 修改nginx配置文件，具体有修改项目文件夹目录（上传到云服务器的">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-05-07T05:48:35.000Z">
-<meta property="article:modified_time" content="2023-05-07T09:32:18.758Z">
+<meta property="article:published_time" content="2023-09-27T10:13:34.000Z">
+<meta property="article:modified_time" content="2023-11-06T07:41:45.654Z">
 <meta property="article:author" content="AddSomeSalt">
+<meta property="article:tag" content="开发">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>mc源码 - AddSalt&#39;s Blog</title>
+  <title>项目部署 - AddSalt&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="mc源码"></span>
+            <span id="subtitle" data-typed-text="项目部署"></span>
           
         </div>
 
@@ -207,8 +208,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-05-07 13:48" pubdate>
-          2023年5月7日 下午
+        <time datetime="2023-09-27 18:13" pubdate>
+          2023年9月27日 晚上
         </time>
       </span>
     
@@ -219,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          571 字
+          918 字
         
       </span>
     
@@ -230,7 +231,7 @@
         
         
         
-          5 分钟
+          8 分钟
         
       </span>
     
@@ -268,21 +269,34 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">mc源码</h1>
+            <h1 style="display: none">项目部署</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="获取方式"><a href="#获取方式" class="headerlink" title="获取方式"></a>获取方式</h1><p>注意，请阅读eula。请勿发布获得的源码。<br>mc反编译github项目：mcp-Reborn</p>
-<h1 id="获取时注意事项"><a href="#获取时注意事项" class="headerlink" title="获取时注意事项"></a>获取时注意事项</h1><p>如果报错请按照具体错误去修改配置等。可百度。<br>常见错误：</p>
-<ol>
-<li>jdk版本不对，见mcp-Reborn。高版本1.18+要用jdk17。</li>
-<li>gradle没配置好。</li>
-<li>idea版本不对（踩坑记录。导入gradle时，报Unable to find the .. method ‘java.lang.String……()’。我是2019报这个错，2021.3.3版本的idea没有错误了。）</li>
-</ol>
-<h1 id="自己整理的源码API，其中：分析记录用-标识"><a href="#自己整理的源码API，其中：分析记录用-标识" class="headerlink" title="自己整理的源码API，其中：分析记录用*标识"></a>自己整理的源码API，其中：分析记录用*标识</h1><p>从启动类分析。<br>启动时传入游戏相关参数，是否启用优化。<br>通过参数配置，生成玩家、游戏对象。<br>通过多线程渲染、启动游戏。  </p>
-<p>重要游戏特性在net.minecraft包内，.world包内有实体、食物、效果、伤害、物品、背包、地形等。<br>world包下的实体(entity)-动物(animal)有猪(pig)。<br>猪的代码中有声音、交互（  mobInteract(参数：玩家、交互手)  ）等方法。<br>判定1.手中非食物、猪身上放置了鞍、非交通工具-在此处代码逻辑为没有人在骑行、玩家非潜行右键、非客户端则骑行。<br>2.否则，如果是食物，则喂食。</p>
-<h1 id="学到的开发知识点"><a href="#学到的开发知识点" class="headerlink" title="学到的开发知识点"></a>学到的开发知识点</h1><p>ImmutableList：不可变、元素不允许为null、高效、线程安全。–实体的乘客属性类型即为此。</p>
+                <p>互联网开发课程部分整理</p>
+<h1 id="vue项目部署到云服务器"><a href="#vue项目部署到云服务器" class="headerlink" title="vue项目部署到云服务器"></a>vue项目部署到云服务器</h1><h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><p>vue项目部署到云服务器上的nginx</p>
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>node 16、vuecli、 阿里云服务器（CentOS）、winSCP、XShell</p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>本地项目执行npm run build，生成dist文件夹。</p>
+<p>用winSCP等上传到云服务器。</p>
+<p>云服务器安装nginx</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">wget</span> ?<br></code></pre></td></tr></table></figure>
+
+<p>……</p>
+<p>修改nginx配置文件，具体有修改项目文件夹目录（上传到云服务器的dist项目文件夹位置）、端口等。</p>
+<p>&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin执行.&#x2F;nginx启动nginx<br>其他指令：<br>.&#x2F;nginx s -stop<br>.&#x2F;nginx s -reload</p>
+<p>netstat xx | grep xx        查看xx</p>
+<p>firewalls -xx </p>
+<p>systmtcl -xx</p>
+<h2 id="注意事项与总结"><a href="#注意事项与总结" class="headerlink" title="注意事项与总结"></a>注意事项与总结</h2><p>linux系统中&#x2F;usr&#x2F;local类似于windows的D：\Programms(x86)等，放程序的。<br>端口<br>防火墙<br>替换文件或更改配置文件后重启服务</p>
+<h1 id="普通web项目部署-静态页面等"><a href="#普通web项目部署-静态页面等" class="headerlink" title="普通web项目部署-静态页面等"></a>普通web项目部署-静态页面等</h1><p>云服务器<br>执行install.sh，安装宝塔：<br>chmod +x install.sh<br>.&#x2F;install.sh</p>
+<p>到tomcat文件夹中conf修改配置（端口）<br>到bin文件夹中输入.&#x2F;startup.sh<br>service tomcat start</p>
+<h2 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h2><p>&#x2F;* 先检查阿里云服务器的端口开放情况 *&#x2F;<br>firewall-cmd –list-ports</p>
+<p>&#x2F;* 开放8080端口 *&#x2F;<br>firewall-cmd –permanent –zone&#x3D;public –add-port&#x3D;8080&#x2F;tcp</p>
+<p>&#x2F;* 重新加载防火墙 *&#x2F;<br>systemctl reload firewalld</p>
+<p>&#x2F;* 查看8080端口是否开放成功 *&#x2F;<br>firewall-cmd –list-ports</p>
+<p>宝塔安装tomcat、新建java项目（也可以用php项目）、上传html文件、开放端口防火墙。</p>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>openstack可以监控云服务器性能？<br>宝塔可以监控云服务器性能、GUI操作项目、云服务器等。</p>
 
                 
               </div>
@@ -292,6 +306,13 @@
               <div class="post-metas my-3">
   
   
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%BC%80%E5%8F%91/">#开发</a>
+      
+    </div>
+  
 </div>
 
 
@@ -300,8 +321,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>mc源码</div>
-      <div>http://example.com/2023/05/07/mc源码/</div>
+      <div>项目部署</div>
+      <div>http://example.com/2023/09/27/项目部署/</div>
     </div>
     <div class="license-meta">
       
@@ -313,7 +334,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年5月7日</div>
+          <div>2023年9月27日</div>
         </div>
       
       
@@ -345,18 +366,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/09/27/%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/" title="项目部署">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">项目部署</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/05/06/mc%E7%BD%91%E7%AB%99/" title="mc网站">
-                        <span class="hidden-mobile">mc网站</span>
+                      <a href="/2023/05/07/mc%E6%BA%90%E7%A0%81/" title="mc源码">
+                        <span class="hidden-mobile">mc源码</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
