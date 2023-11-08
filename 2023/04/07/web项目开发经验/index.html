@@ -24,7 +24,7 @@
 <meta property="og:description" content="前端js对象赋值、复制问题vue对象中 两个data对象都&#x3D;res.data.data.xxx时，绑定的是同一个对象。类似于指针赋值的概念。 vue项目，想复制一个对象且消除关联性：使用Object.assign()只会消除对象内部第一层属性的关联性，即并不是深复制。如果对象只有一层属性，那么可以考虑用let obj2 &#x3D; Object.assign({}, obj1)。如果想">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-04-07T03:28:42.000Z">
-<meta property="article:modified_time" content="2023-05-28T09:23:00.921Z">
+<meta property="article:modified_time" content="2023-11-08T04:52:26.665Z">
 <meta property="article:author" content="AddSomeSalt">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          749 字
+          1.9k 字
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          7 分钟
+          16 分钟
         
       </span>
     
@@ -275,12 +275,41 @@
                 
                 <h1 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h1><p><code>js对象赋值、复制问题</code><br>vue对象中 两个data对象都&#x3D;res.data.data.xxx时，<br>绑定的是同一个对象。类似于指针赋值的概念。</p>
 <p>vue项目，想复制一个对象且消除关联性：<br>使用Object.assign()只会消除对象内部第一层属性的关联性，即并不是深复制。如果对象只有一层属性，那么可以考虑用let obj2 &#x3D; Object.assign({}, obj1)。<br>如果想深复制，可以利用字符串类型和对象类型之间无关联性进行复制，即A转字符串再转为对象赋值给B，那么A和B无关联性了（简单暴力）。let obj2 &#x3D; JSON.parse(JSON.stringify(obj1));</p>
-<h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><p><code>命名规范:</code><br><strong>表名、字段名：</strong><br>小写字母+下划线。</p>
-<p><code>字段类型:</code><br><strong>mysql没有bool类型</strong>，可以用tinyint或者更细一点用tinyint(1)。<br>其中0代表false，1(或非0)代表true。<br>可以映射为java的boolean、int。<br>tinyint占一字节，可以节省数据库存储空间。<br>类型后的(num)是代表显示宽度。</p>
-<h1 id="ajax报错"><a href="#ajax报错" class="headerlink" title="ajax报错"></a>ajax报错</h1><p><code>500等5开头的</code><br>后端错误。</p>
+<h2 id="ajax报错"><a href="#ajax报错" class="headerlink" title="ajax报错"></a>ajax报错</h2><p><code>500等5开头的</code><br>后端错误。</p>
 <p><code>400等4开头的</code><br>400:  请求匹配错误，可能是url，也可能是参数没匹配，比如json转后端List可能会出问题。</p>
 <p>405:  DELETE的request方法不支持：delete是restful风格，这种请求方法的参数要写在路径里，不能<strong>delete（url, {data:xxx}）</strong>。</p>
+<h1 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h1><h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><p><code>命名规范:</code><br><strong>表名、字段名：</strong><br>小写字母+下划线。</p>
+<p><code>字段类型:</code><br><strong>mysql没有bool类型</strong>，可以用tinyint或者更细一点用tinyint(1)。<br>其中0代表false，1(或非0)代表true。<br>可以映射为java的boolean、int。<br>tinyint占一字节，可以节省数据库存储空间。<br>类型后的(num)是代表显示宽度。</p>
 <h1 id="word使用经验"><a href="#word使用经验" class="headerlink" title="word使用经验"></a>word使用经验</h1><p>三线表&#x2F;..表，可以先自己建立表格样式模板（WPS无此功能）.<br>勾选“基于此模板的新文档”可以使换页带表头等。（但未使用成功，是手动添加的表头）<br>表中间某处需要添加文字时，光标选中目标处下一行的单元格，按ctrl+shift+enter即可。</p>
+<h1 id="编程相关"><a href="#编程相关" class="headerlink" title="编程相关"></a>编程相关</h1><h2 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h2><p><code>Typora</code>    现代化的 Markdown 编辑器，支持即时渲染。支持多人协作，可以写文档来记录项目进度和标记问题。—可能比较垃圾。<br><code>notion</code>    一款将【笔记、知识库和任务管理(todoList)】整合的【协作】工具。<br><code>kramdown</code>      Markdown的超集。可以在图片后加{:height&#x3D;”100px” width&#x3D;”100px”}等规定图片大小。而markdown在hexo应用时只能靠html规定图片大小。<br><code>PlasticSCM</code>    Unity可以内嵌的多人协作工具。软件具有可视化界面。<br><code>XShell</code><br><code>WinSCP</code><br><code>知云文献翻译</code>  –有vip</p>
+<h2 id="ai工具"><a href="#ai工具" class="headerlink" title="ai工具"></a>ai工具</h2><p><code>diffusion</code>图像生成<br><code>segmentAnything</code>图像分割<br><code>chatGPT</code>自然语言处理，有私人搭建的接口，类似于yesno网站，可以融合到项目中当一个小功能。<br><code>Claude</code> OpenAI原班人马对标GPT的模型，无需科学上网。<a target="_blank" rel="noopener" href="https://www.anthropic.com/claude-in-slack">https://www.anthropic.com/claude-in-slack</a></p>
+<h2 id="开发类库及调试工具"><a href="#开发类库及调试工具" class="headerlink" title="开发类库及调试工具"></a>开发类库及调试工具</h2><h3 id="后端-1"><a href="#后端-1" class="headerlink" title="后端"></a>后端</h3><p><code>后端utils类：</code><br><a target="_blank" rel="noopener" href="https://hutool.cn/">https://hutool.cn/</a></p>
+<p><code>API文档：</code><br>swagger（根据后端controller等结构自动读取生成。</p>
+<p><code>网络接口调试：</code><br>apipost（国内软件，有网页版）apifox<br>postman（国外软件，？）</p>
+<p><code>对象转换</code><br>mapStruct，不用反射而是直接的java调用（快）实现DO、DTO、VO之间的convert。</p>
+<h3 id="前端-1"><a href="#前端-1" class="headerlink" title="前端"></a>前端</h3><h4 id="UI"><a href="#UI" class="headerlink" title="UI"></a>UI</h4><p><code>三方UI组件库：</code>  </p>
+<ol>
+<li>element-ui</li>
+<li>antD</li>
+<li>…</li>
+</ol>
+<p><code>图标库：</code></p>
+<ol>
+<li>fontawesome.dashgame.com</li>
+<li>阿里图标<br> iconfont.cn</li>
+<li>element-ui官网图标库</li>
+</ol>
+<h4 id="依赖库"><a href="#依赖库" class="headerlink" title="依赖库"></a>依赖库</h4><p><code>常用</code><br>axios网络请求</p>
+<p><code>裁剪图片</code><br>vue-cropper</p>
+<p><code>时间</code><br>moment.js<br>day.js（相比momentjs轻量级2kb，新）</p>
+<p><code>请求拦截数据模拟</code><br>mock.js</p>
+<h4 id="vscode插件"><a href="#vscode插件" class="headerlink" title="vscode插件"></a>vscode插件</h4><p>todo highlight<br>todo tree<br>code translate</p>
+<p>element-ui-helper<br>auto close tag</p>
+<p>live server<br>open in browser</p>
+<h2 id="技术up"><a href="#技术up" class="headerlink" title="技术up"></a>技术up</h2><p>前端：技术胖<br>深度学习：李沐</p>
+<h2 id="知识讲解比较好的教程"><a href="#知识讲解比较好的教程" class="headerlink" title="知识讲解比较好的教程"></a>知识讲解比较好的教程</h2><p>vue+springboot项目：<br>    需有一定基础（比如知道了vue的开发文档，略微了解springboot开发方式–注解开发，Controller&#x2F;Service&#x2F;Dao层）<br>    想深入了解开发内容结构和涉及到的常用库、框架，想开始动手开发等。<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1nV4y1s7ZN">https://www.bilibili.com/video/BV1nV4y1s7ZN</a>  </p>
+<h2 id="深度学习数据集"><a href="#深度学习数据集" class="headerlink" title="深度学习数据集"></a>深度学习数据集</h2><p>hugging face：<br><a target="_blank" rel="noopener" href="https://huggingface.co/">https://huggingface.co/</a>  </p>
+<p>kaggle：<br><a target="_blank" rel="noopener" href="https://www.kaggle.com/">https://www.kaggle.com/</a>  </p>
 
                 
               </div>
