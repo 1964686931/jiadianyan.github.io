@@ -18,19 +18,19 @@
   
     <meta name="description" content="前端js对象赋值、复制问题vue对象中 两个data对象都&#x3D;res.data.data.xxx时，绑定的是同一个对象。类似于指针赋值的概念。 vue项目，想复制一个对象且消除关联性：使用Object.assign()只会消除对象内部第一层属性的关联性，即并不是深复制。如果对象只有一层属性，那么可以考虑用let obj2 &#x3D; Object.assign({}, obj1)。如果想">
 <meta property="og:type" content="article">
-<meta property="og:title" content="web项目开发经验">
+<meta property="og:title" content="开发经验、工具、资源等">
 <meta property="og:url" content="http://example.com/2023/04/07/web%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C/index.html">
 <meta property="og:site_name" content="AddSalt&#39;s Blog">
 <meta property="og:description" content="前端js对象赋值、复制问题vue对象中 两个data对象都&#x3D;res.data.data.xxx时，绑定的是同一个对象。类似于指针赋值的概念。 vue项目，想复制一个对象且消除关联性：使用Object.assign()只会消除对象内部第一层属性的关联性，即并不是深复制。如果对象只有一层属性，那么可以考虑用let obj2 &#x3D; Object.assign({}, obj1)。如果想">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-04-07T03:28:42.000Z">
-<meta property="article:modified_time" content="2023-11-09T12:47:04.602Z">
+<meta property="article:modified_time" content="2024-02-21T14:39:30.802Z">
 <meta property="article:author" content="AddSomeSalt">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>web项目开发经验 - AddSalt&#39;s Blog</title>
+  <title>开发经验、工具、资源等 - AddSalt&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="web项目开发经验"></span>
+            <span id="subtitle" data-typed-text="开发经验、工具、资源等"></span>
           
         </div>
 
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.9k 字
+          2k 字
         
       </span>
     
@@ -268,7 +268,7 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">web项目开发经验</h1>
+            <h1 style="display: none">开发经验、工具、资源等</h1>
             
             
               <div class="markdown-body">
@@ -276,7 +276,7 @@
                 <h1 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h1><p><code>js对象赋值、复制问题</code><br>vue对象中 两个data对象都&#x3D;res.data.data.xxx时，<br>绑定的是同一个对象。类似于指针赋值的概念。</p>
 <p>vue项目，想复制一个对象且消除关联性：<br>使用Object.assign()只会消除对象内部第一层属性的关联性，即并不是深复制。如果对象只有一层属性，那么可以考虑用let obj2 &#x3D; Object.assign({}, obj1)。<br>如果想深复制，可以利用字符串类型和对象类型之间无关联性进行复制，即A转字符串再转为对象赋值给B，那么A和B无关联性了（简单暴力）。let obj2 &#x3D; JSON.parse(JSON.stringify(obj1));</p>
 <h2 id="ajax报错"><a href="#ajax报错" class="headerlink" title="ajax报错"></a>ajax报错</h2><p><code>500等5开头的</code><br>后端错误。</p>
-<p><code>400等4开头的</code><br>400:  请求匹配错误，可能是url，也可能是参数没匹配，比如json转后端List可能会出问题。</p>
+<p><code>400等4开头的</code><br>400:  请求匹配错误，可能是url，也可能是参数没匹配，比如json转后端List可能会出问题。get请求传参包括数组时也是400，需要增添代码单独解决此类情况…</p>
 <p>405:  DELETE的request方法不支持：delete是restful风格，这种请求方法的参数要写在路径里，不能<strong>delete（url, {data:xxx}）</strong>。</p>
 <h1 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h1><h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><p><code>命名规范:</code><br><strong>表名、字段名：</strong><br>小写字母+下划线。</p>
 <p><code>字段类型:</code><br><strong>mysql没有bool类型</strong>，可以用tinyint或者更细一点用tinyint(1)。<br>其中0代表false，1(或非0)代表true。<br>可以映射为java的boolean、int。<br>tinyint占一字节，可以节省数据库存储空间。<br>类型后的(num)是代表显示宽度。</p>
@@ -309,6 +309,7 @@
 <h4 id="idea插件"><a href="#idea插件" class="headerlink" title="idea插件"></a>idea插件</h4><p>?? promoter X   快捷键提示工具。助于养成快捷键使用习惯。</p>
 <h2 id="技术up"><a href="#技术up" class="headerlink" title="技术up"></a>技术up</h2><p>前端：技术胖<br>深度学习：李沐</p>
 <h2 id="知识讲解比较好的教程"><a href="#知识讲解比较好的教程" class="headerlink" title="知识讲解比较好的教程"></a>知识讲解比较好的教程</h2><p>vue+springboot项目：<br>    需有一定基础（比如知道了vue的开发文档，略微了解springboot开发方式–注解开发，Controller&#x2F;Service&#x2F;Dao层）<br>    想深入了解开发内容结构和涉及到的常用库、框架，想开始动手开发等。<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1nV4y1s7ZN">https://www.bilibili.com/video/BV1nV4y1s7ZN</a>  </p>
+<p>【b站】KnowingAI知智。AI知识讲解1分钟短视频，速通概貌。</p>
 <h2 id="深度学习数据集"><a href="#深度学习数据集" class="headerlink" title="深度学习数据集"></a>深度学习数据集</h2><p>hugging face：<br><a target="_blank" rel="noopener" href="https://huggingface.co/">https://huggingface.co/</a>  </p>
 <p>kaggle：<br><a target="_blank" rel="noopener" href="https://www.kaggle.com/">https://www.kaggle.com/</a>  </p>
 
@@ -328,7 +329,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>web项目开发经验</div>
+      <div>开发经验、工具、资源等</div>
       <div>http://example.com/2023/04/07/web项目开发经验/</div>
     </div>
     <div class="license-meta">
