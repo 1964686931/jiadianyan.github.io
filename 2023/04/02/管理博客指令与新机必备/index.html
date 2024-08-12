@@ -24,7 +24,7 @@
 <meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. hexo教">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-04-02T14:12:12.427Z">
-<meta property="article:modified_time" content="2024-07-22T11:30:00.664Z">
+<meta property="article:modified_time" content="2024-08-08T07:11:44.301Z">
 <meta property="article:author" content="AddSomeSalt">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.3k 字
+          1.8k 字
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          12 分钟
+          16 分钟
         
       </span>
     
@@ -294,14 +294,22 @@
 <blockquote>
 <p>还有可能是不仅要清除缓存，部署的命令还要改成hexo deploy -g。</p>
 </blockquote>
-<h3 id="网页显示没更新"><a href="#网页显示没更新" class="headerlink" title="网页显示没更新"></a>网页显示没更新</h3><p>可能多种原因，最常见的是时间延迟、浏览器缓存问题。一般过一小会儿就ok了。<br>想立即查看也可尝试清除浏览器缓存或者Ctrl+F5强制刷新清除之前缓存。（eg.抓包等work中没抓到包可以考虑刷新方式是否正确。</p>
+<h3 id="网页显示没更新"><a href="#网页显示没更新" class="headerlink" title="网页显示没更新"></a>网页显示没更新</h3><p>可能多种原因，最常见的是时间延迟、浏览器缓存问题。一般过一小会儿就ok了。<br>想立即查看也可尝试清除浏览器缓存或者<code>Ctrl+F5</code>或<code>Shift+F5</code>强制刷新清除之前缓存。（eg.抓包等work中没抓到包可以考虑刷新方式是否正确。</p>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-<h1 id="个人新机必做一系列配置"><a href="#个人新机必做一系列配置" class="headerlink" title="个人新机必做一系列配置"></a>个人新机必做一系列配置</h1><h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p>edge、qq Browser<br>vscode</p>
+<h1 id="个人新机必做一系列配置"><a href="#个人新机必做一系列配置" class="headerlink" title="个人新机必做一系列配置"></a>个人新机必做一系列配置</h1><h2 id="硬盘分盘注意事项"><a href="#硬盘分盘注意事项" class="headerlink" title="硬盘分盘注意事项"></a>硬盘分盘注意事项</h2><p><code>C</code>：<br>安装位置避免C盘，以及软件内部附加存储位置也要单独改。如npm的下载位置、vscode插件位置、微信聊天记录等app的文档、等<br>具体参考书签或现查。不知能不能查到一劳永逸改掉默认安装位置或扩展数据保存位置。<br><code>D等</code>:<br>目录：software编程软件、app普通应用软件、games、download、code（向下分为各种workspace）</p>
+<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p>edge、qq Browser×<br>vscode<br>7zip</p>
+<h2 id="专业环境、软件"><a href="#专业环境、软件" class="headerlink" title="专业环境、软件"></a>专业环境、软件</h2><h3 id="通用必装"><a href="#通用必装" class="headerlink" title="通用必装"></a>通用必装</h3><p>ssh，Xshell<br>vscode<br>git、hexo<br>docker？</p>
+<h3 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h3><p><strong>可见本地笔记环境docx</strong><br>anaconda：python本身和anaconda环境有冲突，涉及到IDE所选是否匹配、环境变量上下关系（上面的优先）等。<br>pycharm<br>jupyter</p>
+<h3 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h3><p><strong>java</strong><br>jdk<br>idea破解<br>mysql？navicat<br>redis？<br>node、npm、maven、tomcat？×</p>
+<p><strong>c++</strong><br>编译器<br>。。。</p>
+<h3 id="其他专业软件"><a href="#其他专业软件" class="headerlink" title="其他专业软件"></a>其他专业软件</h3><p>elasticsearch</p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>vscode插件：<br>配置还是啥好像保存到了盘里?<br>翻译、</p>
+<p>【此插件及配置方便养成个人编程标注习惯】todoHighLight+todoTree，配置文件保存在阿里云盘备份。<br><strong>记得新机改vscode的extensions的存放位置——通过快捷方式启动命令加参数指定位置</strong>。  </p>
+<blockquote>
+<p>原扩展位置：C:\Users\yourname.vscode\extensions<br>快捷方式-属性-目标：”D:\vsCode\Microsoft VS Code\Code.exe” –extensions-dir “D:\Software\VSCode-extension\extensions”，此后双击快捷方式可以正常加载扩展。<br>但是此时双击文件默认vscode打开无法应用这个参数，这种启动不是用的快捷方式，走不了快捷方式指定的命令行参数。<br>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_53510183/article/details/126906182">https://blog.csdn.net/weixin_53510183/article/details/126906182</a></p>
+</blockquote>
+<p>然后此插件配置文件好像还在c盘：C:\Users\zxz\AppData\Roaming\Code\User\settings.json。</p>
 <h2 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h2><p>关闭更新、p2p？<br>可参考抖音收藏等。</p>
-<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>python本身和anaconda环境有冲突，涉及到IDE所选是否匹配、环境变量上下关系（上面的优先）等。</p>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>vscode插件：<br>翻译、<br>【此插件及配置方便养成个人编程标注习惯】todoHighLight+todoTree，配置文件保存在阿里云盘备份。——记得新机改vscode的extensions的存放位置——通过快捷方式启动命令加参数指定位置。然后此插件配置文件好像还在c盘：C:\Users\zxz\AppData\Roaming\Code\User\settings.json。</p>
-<h2 id="硬盘分盘注意事项"><a href="#硬盘分盘注意事项" class="headerlink" title="硬盘分盘注意事项"></a>硬盘分盘注意事项</h2><p><code>C</code>：<br>安装位置避免C盘，以及软件内部附加存储位置也要单独改。如npm的下载位置、vscode插件位置、微信聊天记录等app的文档、等<br>具体参考书签或现查。</p>
-<p><code>D等</code>:<br>目录：software编程软件、app普通应用软件、games、download、code（向下分为各种workspace）</p>
 <h2 id="可参考的保留内容"><a href="#可参考的保留内容" class="headerlink" title="可参考的保留内容"></a>可参考的保留内容</h2><p>AIpython环境搭建.docx（暂未保存</p>
 
                 
